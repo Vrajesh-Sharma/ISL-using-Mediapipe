@@ -1,0 +1,16 @@
+# Validated against these versions. Newer torch/albumentations sometimes
+# rename parameters (this codebase already targets the current albumentations
+# 2.x and modern torch.amp APIs), so if you pin older versions instead,
+# double check utils/augmentations.py and train.py against your installed
+# versions' docs.
+torch>=2.2
+torchvision>=0.17
+mediapipe>=0.10.14        # needs the Tasks API (mp.tasks.vision.HandLandmarker)
+opencv-python>=4.9
+albumentations>=2.0
+numpy>=1.26
+scikit-learn>=1.4
+matplotlib>=3.8
+seaborn>=0.13
+tqdm>=4.66
+pandas>=2.2
