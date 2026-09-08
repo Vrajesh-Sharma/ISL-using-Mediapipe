@@ -46,7 +46,7 @@ def get_loader_for_split(split):
 
 
 def load_model(device):
-    ckpt = torch.load(os.path.join(config.CHECKPOINT_DIR, "best_model.pt"), map_location=device)
+    ckpt = torch.load(os.path.join(config.CHECKPOINT_DIR, "best_model.pt"), map_location=device, weights_only=False)
     model = FusionISLModel().to(device)
     model.load_state_dict(ckpt["model_state"])
     model.eval()
